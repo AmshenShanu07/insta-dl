@@ -54,7 +54,7 @@ banner=Entry(app,font=screen_font,bg='orange',fg='white',textvariable=script.res
 banner.grid(row=3,column=0)
 banner.insert(0,script.result)
 
-Label(app,text='©AmshenYesudas', bg='orange', justify='center').grid(row=4,column=0)
+Label(app,text='©AmshenShanu&AbisHasan', bg='orange', justify='center').grid(row=4,column=0)
 
 
 app.mainloop()
