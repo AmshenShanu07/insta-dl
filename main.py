@@ -45,7 +45,7 @@ title.grid(column=0,row=0)
 
 
 link=tkinter.StringVar()
-link=Entry(app,font=input_font)
+link=Entry(app,bd=4,font=input_font)
 link.grid(row=1,column=0)
 
 download_btn=Button(text='Download' ,bg='red',fg='orange',width=10,height=2,font=btn_font,command=lambda:get())
