@@ -57,7 +57,6 @@ link=StringVar()
 Label(app,text='URL',fg='white',bg=bg_color).grid(row=2,column=0,sticky=W,padx=50)
 link=Entry(app,bd=1,font=input_font)
 link.grid(row=2,column=0)
-Label(app,text='Enter your url',fg='white',bg=bg_color,justify='center').grid(row=4,column=0)
 
 #radio buttons
 radio_post=Radiobutton(app,variable=option,value=1,text='Post',fg=font_colour
