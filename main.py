@@ -2,7 +2,6 @@
 from os import link
 from tkinter import *
 from script import load
-import tkinter
 from PIL import ImageTk,Image
 
 #Variable
@@ -38,41 +37,44 @@ def get():
 
 #  G.U.I
 app=Tk()
-app.geometry('400x390')
-app.title('InstaDownloader')
+app.geometry('400x490')
+app.title('Insta-dl')
 app.configure(background=bg_color)
 option=IntVar()
 option.set(1)
-btn=PhotoImage(file='script\\btn.png')
+btn=PhotoImage(file='script\\img\\btn.png')
+img=Image.open('script\\img\\title.png')
+bg=ImageTk.PhotoImage(img)
 
 #title
-title =Label(app,text="Instagram",background=bg_color,fg=font_colour,font=screen_font)  
-title.grid(column=0,row=0,pady=15)
+Label(app,text='ver 1.0',fg='white',bg=bg_color,justify='center').grid(row=0,column=0)
+title =Label(image=bg,bd=0)  
+title.grid(column=0,row=1,pady=15)
 
 #url entry
-link=tkinter.StringVar()
+link=StringVar()
 link=Entry(app,bd=1,font=input_font)
-link.grid(row=1,column=0,pady=5)
-Label(app,text='Enter your url',fg='white',bg=bg_color,justify='center').grid(row=2,column=0)
+link.grid(row=2,column=0,pady=5)
+Label(app,text='Enter your url',fg='white',bg=bg_color,justify='center').grid(row=3,column=0)
 
 #radio buttons
 radio_post=Radiobutton(app,variable=option,value=1,text='Post',fg=font_colour
                         ,bg=bg_color,activebackground=bg_color,activeforeground=bg_color,selectcolor=bg_color,font=10)
 radio_pro_pic=Radiobutton(app,variable=option,value=2,text='porfile pic',fg=font_colour,bg=bg_color,
                             activebackground=bg_color,activeforeground=bg_color,font=10,selectcolor=bg_color)
-radio_pro_pic.grid(row=3,column=0,sticky=E,padx=100,pady=10)
-radio_post.grid(row=3,column=0,sticky=W,padx=100,pady=10)
+radio_pro_pic.grid(row=4,column=0,sticky=E,padx=100,pady=10)
+radio_post.grid(row=4,column=0,sticky=W,padx=100,pady=10)
 
 #download button
 download_btn=Button(app,image=btn,background=bg_color,activebackground=bg_color,bd=0 ,command=lambda:get())
-download_btn.grid(row=4,column=0,pady=10)
+download_btn.grid(row=5,column=0,pady=10)
 banner=Entry(app,font=screen_font,bg=bg_color,bd=0,fg=font_colour,textvariable=script.result,justify='center')
-banner.grid(row=5,column=0,pady=20)
+banner.grid(row=6,column=0,pady=20)
 banner.insert(0,script.result)
 
 #result
-Label(app,text='© AmshenShanu & AbirHasan & Palahsu',fg='white',bg=bg_color,justify='center').grid(row=6,column=0)
-Label(app,text='Tool to download videos and photos from instagram',fg='white',bg=bg_color,justify='center').grid(row=7,column=0)
+Label(app,text='© AmshenShanu & AbirHasan & Palahsu',fg='white',bg=bg_color,justify='center').grid(row=7,column=0)
+Label(app,text='Tool to download videos and photos from instagram',fg='white',bg=bg_color,justify='center').grid(row=8,column=0)
 
 
 app.mainloop()
