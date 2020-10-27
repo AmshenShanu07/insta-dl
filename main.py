@@ -2,13 +2,14 @@ from os import link
 from tkinter import *
 from script import load
 import tkinter
-
+from PIL import ImageTk,Image
 
 #Variable
 script=load
 input_font = ('Verdana',15)
 screen_font = ('Verdana',25)
 btn_font = ('Verdana',15)
+bg_color='orange'
 
 
 
@@ -23,8 +24,9 @@ def get():
             banner.delete(0,END)
             banner.insert(0,script.result)
         elif select==2:
+            script.download_pp(url)
             banner.delete(0,END)
-            banner.insert(0,'Feature not added')
+            banner.insert(0,script.result)
     else:
         banner.delete(0,END)
         banner.insert(0,"No Internet")
@@ -35,8 +37,8 @@ def get():
 
 #  G.U.I
 app=Tk()
-app.geometry('425x230')
-app.configure(background="orange")
+app.geometry('420x240')
+app.configure(background=bg_color)
 app.title('InstaDownloader')
 option=IntVar()
 option.set(1)
@@ -44,7 +46,7 @@ option.set(1)
 
 
 
-title = Label(app, text ='InstaDownloader', font = screen_font,fg="#FF0055",bg='orange')  
+title = Label(app, text ='InstaDownloader', font = screen_font,fg="#FF0055",bg=bg_color)  
 title.grid(column=0,row=0)
 
 
@@ -52,8 +54,8 @@ link=tkinter.StringVar()
 link=Entry(app,bd=4,font=input_font)
 link.grid(row=1,column=0)
 
-radio_post=Radiobutton(app,variable=option,value=1,text='Post',bg='orange',activebackground='orange')
-radio_pro_pic=Radiobutton(app,variable=option,value=2,text='porfile pic',bg='orange',activebackground='orange')
+radio_post=Radiobutton(app,variable=option,value=1,text='Post',bg=bg_color,activebackground=bg_color)
+radio_pro_pic=Radiobutton(app,variable=option,value=2,text='porfile pic',bg=bg_color,activebackground=bg_color)
 radio_pro_pic.grid(row=2,column=0,sticky=E,padx=100)
 radio_post.grid(row=2,column=0,sticky=W,padx=100)
 
@@ -63,7 +65,7 @@ banner=Entry(app,font=screen_font,bg='orange',fg='white',textvariable=script.res
 banner.grid(row=4,column=0)
 banner.insert(0,script.result)
 
-Label(app,text='©AmshenShanu&AbisHasan', bg='orange', justify='center').grid(row=5,column=0)
+Label(app,text='©AmshenShanu & AbirHasan', bg=bg_color, justify='center').grid(row=5,column=0)
 
 
 app.mainloop()
