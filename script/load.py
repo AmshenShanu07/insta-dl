@@ -69,7 +69,7 @@ def download_post(link):
                         f.write(data)
                 t.close()
                 shutil.move(filename+'.mp4','Downloads')
-                result="Sucessfully Downloaded"  
+                result="Downloaded post!"  
         else:
             result="Invalid url"
     except AttributeError:
@@ -116,7 +116,7 @@ def download_pp(url):
                         f.write(data)
                 t.close()
                 shutil.move(filename+'.jpg','Downloads')
-                result='Downloaded!'
+                result='Downloaded profile pic!'
 
     except Exception:
-        result="Invalid User"
+        result="Invalid Url"
