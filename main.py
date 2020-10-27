@@ -71,8 +71,8 @@ banner.grid(row=5,column=0,pady=20)
 banner.insert(0,script.result)
 
 #result
-Label(app,text='©AmshenShanu & AbirHasan',fg='white',bg=bg_color,justify='center').grid(row=6,column=0)
-Label(app,text='Thanks to Palahsu',fg='white',bg=bg_color,justify='center').grid(row=7,column=0)
+Label(app,text='© AmshenShanu & AbirHasan & Palahsu',fg='white',bg=bg_color,justify='center').grid(row=6,column=0)
+Label(app,text='Tool to download videos and photos from instagram',fg='white',bg=bg_color,justify='center').grid(row=7,column=0)
 
 
 app.mainloop()
