@@ -20,7 +20,7 @@ def connection(url='http://www.google.com/', timeout=5):
     return False
 
 #Download Post
-def download(link):
+def download_post(link):
     global result
 
     url = link
@@ -73,4 +73,5 @@ def download(link):
             result="Invalid url"
     except AttributeError:
         result="Unknown URL"
+
 

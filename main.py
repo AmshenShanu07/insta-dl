@@ -15,19 +15,20 @@ btn_font = ('Verdana',15)
 #Functions
 def get():
     url=link.get()
+    select=option.get()
+    
     if script.connection()==True:
-        if url:
-            script.download(url)
+        if select==1:
+            script.download_post(url)
             banner.delete(0,END)
             banner.insert(0,script.result)
-        else:
-            result='Link not valid'
+        elif select==2:
             banner.delete(0,END)
-            banner.insert(0,result)
+            banner.insert(0,'Feature not added')
     else:
-        result="Plzz connect to Internet"
         banner.delete(0,END)
-        banner.insert(0,result)
+        banner.insert(0,"No Internet")
+            
 
 
 
@@ -37,6 +38,9 @@ app=Tk()
 app.geometry('425x230')
 app.configure(background="orange")
 app.title('InstaDownloader')
+option=IntVar()
+option.set(1)
+
 
 
 
@@ -48,13 +52,18 @@ link=tkinter.StringVar()
 link=Entry(app,bd=4,font=input_font)
 link.grid(row=1,column=0)
 
+radio_post=Radiobutton(app,variable=option,value=1,text='Post',bg='orange',activebackground='orange')
+radio_pro_pic=Radiobutton(app,variable=option,value=2,text='porfile pic',bg='orange',activebackground='orange')
+radio_pro_pic.grid(row=2,column=0,sticky=E,padx=100)
+radio_post.grid(row=2,column=0,sticky=W,padx=100)
+
 download_btn=Button(text='Download' ,bg='red',fg='orange',width=10,height=2,font=btn_font,command=lambda:get())
-download_btn.grid(row=2,column=0)
+download_btn.grid(row=3,column=0)
 banner=Entry(app,font=screen_font,bg='orange',fg='white',textvariable=script.result,justify='center')
-banner.grid(row=3,column=0)
+banner.grid(row=4,column=0)
 banner.insert(0,script.result)
 
-Label(app,text='©AmshenShanu&AbisHasan', bg='orange', justify='center').grid(row=4,column=0)
+Label(app,text='©AmshenShanu&AbisHasan', bg='orange', justify='center').grid(row=5,column=0)
 
 
 app.mainloop()
