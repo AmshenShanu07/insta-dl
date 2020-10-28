@@ -51,7 +51,7 @@ def download_post(link):
                         f.write(data)
                 t.close()
                 shutil.move(filename+'.jpg','Downloads')
-                result="Sucessfully Downloaded"
+                result="Downloaded !"
 
             if final == "video":
                 extract_video_link = re.search(r'meta property="og:video" content=[\'"]?([^\'" >]+)', src)
@@ -69,11 +69,11 @@ def download_post(link):
                         f.write(data)
                 t.close()
                 shutil.move(filename+'.mp4','Downloads')
-                result="Downloaded post!"  
+                result="Downloaded !"  
         else:
             result="Invalid url"
     except AttributeError:
-        result="Unknown URL"
+        result="Invalid URL"
 
 def download_pp(url):
     global result
@@ -116,7 +116,7 @@ def download_pp(url):
                         f.write(data)
                 t.close()
                 shutil.move(filename+'.jpg','Downloads')
-                result='Downloaded profile pic!'
+                result='Downloaded !'
 
     except Exception:
         result="Invalid Url"

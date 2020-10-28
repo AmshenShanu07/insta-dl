@@ -22,10 +22,14 @@ def get():
     
     if script.connection()==True:
         if select==1:
+            banner.delete(0,END)
+            banner.insert(0,'Downloading..')
             script.download_post(url)
             banner.delete(0,END)
             banner.insert(0,script.result)
         elif select==2:
+            banner.delete(0,END)
+            banner.insert(0,'Downloading..')
             script.download_pp(url)
             banner.delete(0,END)
             banner.insert(0,script.result)
@@ -38,13 +42,15 @@ def get():
 #  G.U.I
 app=Tk()
 app.geometry('400x490')
+app.minsize(400,490)
+app.maxsize(400,490)
 app.title('Insta-dl')
 app.iconbitmap('script\\img\icon.ico')
 app.configure(background=bg_color)
 option=IntVar()
 option.set(1)
 btn=PhotoImage(file='script\\img\\btn.png')
-img=Image.open('script\\img\\title.png')
+img=Image.open('script\\img\\title.jpg')
 bg=ImageTk.PhotoImage(img)
 
 #title
