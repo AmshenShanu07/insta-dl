@@ -28,6 +28,10 @@ python start.py
 ## Important:
 This is in development. Could be buggy. If you get any kind of error please report in repo issues. Also you can report on my [Telegram Group](http://t.me/linux_repo).
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 40fe53c18636740ba598b0cc43d8757f7f835349
 <a href="https://t.me/linux_repo"><img src="https://img.shields.io/badge/Telegram-Join%20Telegram%20Group-blue.svg?logo=telegram"></a>
 
 ## Follow on:
@@ -42,4 +46,8 @@ This is in development. Could be buggy. If you get any kind of error please repo
 </p>
 <p align="left">
 <a href="https://instagram.com/AbirHasan2005"><img src="https://img.shields.io/badge/Instagram-Follow%20on%20Instagram-important.svg?logo=instagram"></a>
+<<<<<<< HEAD
 </p>
+=======
+</p>
+>>>>>>> 40fe53c18636740ba598b0cc43d8757f7f835349
