@@ -1,5 +1,7 @@
 #IMPORTS
 from os import link
+from tkinter import font
+import webbrowser
 from tkinter import *
 from script import load
 from PIL import ImageTk,Image
@@ -37,13 +39,14 @@ def get():
         banner.delete(0,END)
         banner.insert(0,"No Internet")
             
-
+def connect(url):
+    webbrowser.open(url)
 
 #  G.U.I
 app=Tk()
 app.geometry('400x490')
-app.minsize(400,490)
-app.maxsize(400,490)
+#app.minsize(400,490)
+#app.maxsize(400,490)
 app.title('Insta-dl')
 app.iconbitmap('script\\img\icon.ico')
 app.configure(background=bg_color)
@@ -82,6 +85,10 @@ banner.insert(0,script.result)
 #result
 Label(app,text='© AmshenShanu & AbirHasan & Palahsu',fg='white',bg=bg_color,justify='center').grid(row=7,column=0)
 Label(app,text='Tool to download videos and photos from instagram',fg='white',bg=bg_color,justify='center').grid(row=8,column=0)
+
+#contact
+Button(app,text='contact us',activebackground='black',activeforeground='white',bg=bg_color,fg='white',command=lambda:connect('https://t.me/linux_repo'),bd=0,font='Verdana 8 underline').grid(row=9,column=0,sticky=W,padx=120,pady=10)
+Button(app,text='help?',activebackground='black',activeforeground='white',bg=bg_color,fg='white',bd=0,font='Verdana 8 underline',command=lambda:connect('https://github.com/AmshenShanu07/insta-dl')).grid(row=9,column=0,sticky=E,padx=150)
 
 
 app.mainloop()
