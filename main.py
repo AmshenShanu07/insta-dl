@@ -45,8 +45,8 @@ def connect(url):
 #  G.U.I
 app=Tk()
 app.geometry('400x490')
-#app.minsize(400,490)
-#app.maxsize(400,490)
+app.minsize(400,490)
+app.maxsize(400,490)
 app.title('Insta-dl')
 app.iconbitmap('script\\img\icon.ico')
 app.configure(background=bg_color)
