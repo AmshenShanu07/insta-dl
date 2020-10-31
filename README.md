@@ -2,7 +2,7 @@
 This is Instagram Downloader Tool coded in Python3. Helps to download Instgram Pictures & Videos by Post Link.
 
 ### Preview:
-![Screenshot](img/screenshot.png)
+![Screenshot](script/img/screenshot.png)
 
 ## Thanks to:
 - [AmshenShanu07](https://github.com/AmshenShanu07)
@@ -22,10 +22,10 @@ This is Instagram Downloader Tool coded in Python3. Helps to download Instgram P
 
 ## Setup & Run:
 ```
-git clone https://github.com/AbirHasan2005/instagram-dl
-cd instagram-dl
+git clone https://github.com/AmshenShanu07/insta-dl
+cd insta-dl
 python -m install -r requirements.txt
-python instagram-dl.py
+python main.py
 ```
 
 ### Releases:
