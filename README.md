@@ -1,10 +1,13 @@
-# Insta-DL
+# Instagram-DL
 This is Instagram Downloader Tool coded in Python3. Helps to download Instgram Pictures & Videos by Post Link.
 
+### Preview:
+![Screenshot](img/screenshot.png)
+
 ## Thanks to:
-- [AmshenShanu07](https://github.com/AmshenShanu07/insta-dl)
+- [AmshenShanu07](https://github.com/AmshenShanu07)
 - [Palahsu](https://github.com/palahsu)
-- [AbirHasan2005](https://github.com/AbirHasan2005/insta-dl)
+- [AbirHasan2005](https://github.com/AbirHasan2005)
 
 ## Made For:
 - Linux
@@ -19,15 +22,26 @@ This is Instagram Downloader Tool coded in Python3. Helps to download Instgram P
 
 ## Setup & Run:
 ```
-git clone https://github.com/AmshenShanu07/insta-dl
-cd insta-dl
-python3 -m install -r requirements.txt
-python start.py
+git clone https://github.com/AbirHasan2005/instagram-dl
+cd instagram-dl
+python -m install -r requirements.txt
+python instagram-dl.py
 ```
 
-## Important:
-This is in development. Could be buggy. If you get any kind of error please report in repo issues. Also you can report on my [Telegram Group](http://t.me/linux_repo).
+### Releases:
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/AbirHasan2005/instagram-dl?logo=github)](https://github.com/AbirHasan2005/instagram-dl/releases)
 
+<details>
+  <summary>Important</summary>
+  
+#### ![GitHub top language](https://img.shields.io/github/languages/top/AbirHasan2005/instagram-dl?logo=python)
+  
+This is in development. Could be buggy. If you get any kind of error please report in [issues](https://github.com/AbirHasan2005/instagram-dl/issues). Also you can report on my [Telegram Group](http://t.me/linux_repo). Also this is available on [SourceForge](https://sourceforge.net/projects/instagram-dl/) as EXE File for Windows.
+
+#### SourceForge:
+<a href="https://sourceforge.net/projects/instagram-dl/"><img alt="SourceForge" src="https://img.shields.io/sourceforge/dt/instagram-dl?color=blue&label=SourceForge&logo=sourceforge"></a>
+
+</details>
 
 ## Connect us on:
 ### Community
